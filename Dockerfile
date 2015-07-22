@@ -7,7 +7,9 @@ RUN \
     git \
     libsqlite3-dev \
     libprotobuf-dev \
-    protobuf-compiler
+    protobuf-compiler && \
+    apt-get clean && \
+    rm -rf  /var/lib/apt
 
 RUN \
   git clone https://github.com/mapbox/tippecanoe.git && \
